@@ -5,7 +5,6 @@ def check_unique(pair,matrix):
             exist=True
     return exist
 pass_code=[]
-unique_pair=[]
 code_number=int(input('Кодовая цифра: '))
 if 3<=code_number<=20:
     for i in range(1,code_number):
@@ -13,7 +12,6 @@ if 3<=code_number<=20:
             if code_number%(i+j)==0:
                 un_pair=[i,j]
                 check=check_unique(un_pair,pass_code)
-                unique_pair=str(un_pair[1])+str(un_pair[0])
                 if check==False and i!=j:
                     pass_code.append(un_pair)
             else:
